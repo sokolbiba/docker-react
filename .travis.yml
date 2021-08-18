@@ -5,4 +5,4 @@ before_install:
   - docker build -t sokolbiba/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run sokolbiba/docker-react npm run test -- --coverage
+  - docker run -e CI=true sokolbiba/docker-react npm run test
